@@ -876,6 +876,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &5409797895185742751
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584337120111515300}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1a8a1834e4a09d74cbceb6f62da3a490, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8926372989231959981
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +997,7 @@ MonoBehaviour:
   gravity: 9.8
   jumpForce: 10
   speed: 3
+  animator: {fileID: 5409797895185742751}
 --- !u!143 &8926372989875250157
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1027,6 +1047,7 @@ MonoBehaviour:
   valueRectTransform: {fileID: 486177429474910754}
   gamplayUI: {fileID: 5791196898014285519}
   gameOverScreen: {fileID: 7093984980617533905}
+  animator: {fileID: 5409797895185742751}
 --- !u!1 &8926372990410576029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1203,12 @@ PrefabInstance:
 --- !u!4 &8965085269116193822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6754901ea555cfe4db9470ae2cc5e73d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8926372990518520821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8584337120111515300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6754901ea555cfe4db9470ae2cc5e73d,
     type: 3}
   m_PrefabInstance: {fileID: 8926372990518520821}
   m_PrefabAsset: {fileID: 0}
