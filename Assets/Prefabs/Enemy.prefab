@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 100
-  playerProgress: {fileID: 0}
+  playerProgress: {fileID: 5473395946006169391, guid: f27c626b8b59cde4598134f023cf8fe8,
+    type: 3}
 --- !u!136 &7961403403919634518
 CapsuleCollider:
   m_ObjectHideFlags: 0

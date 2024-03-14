@@ -18,6 +18,12 @@ public class EnemyHealth : MonoBehaviour
     {
         
     }
+
+    public bool IsAlive()
+    {
+        return value > 0;
+    }
+
     public void DealDamage(float damage)
     {
         playerProgress.AddExperiens(damage);
@@ -28,4 +34,5 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

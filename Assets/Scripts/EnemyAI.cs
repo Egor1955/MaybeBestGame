@@ -10,6 +10,8 @@ public class EnemyAI : MonoBehaviour
     public float viewAngle;
     public float damage = 30;
 
+    public EnemyHealth enemyHealth;
+
     private PlayerHealth _playerHealth;
 
     private NavMeshAgent _navMeshAgent;
@@ -23,8 +25,15 @@ public class EnemyAI : MonoBehaviour
 
         _playerHealth = player.GetComponent<PlayerHealth>();
 
+        enemyHealth = GetComponent<EnemyHealth>();
+
         PickNewPatrolPoint();
        
+    }
+
+    public bool IsAlive()
+    {
+        return enemyHealth.IsAlive();
     }
 
     // Update is called once per frame

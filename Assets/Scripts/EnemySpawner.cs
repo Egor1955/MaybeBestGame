@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public List<Transform> patrolPoints;
     public int enemiesMaxCount = 5;
     public float delay = 5;
+    public float increaseEnemiesCountDelay = 30;
 
     private List<Transform> spawnerPoints;
     private List<EnemyAI> enemies;
@@ -19,10 +20,25 @@ public class EnemySpawner : MonoBehaviour
     {
         spawnerPoints = new List<Transform>(transform.GetComponentsInChildren<Transform>());
         enemies = new List<EnemyAI>();
+
+        Invoke("IncreaseEnemiesMaxCount", increaseEnemiesCountDelay);
+    }
+
+    private void IncreaseEnemiesMaxCount()
+    {
+        enemiesMaxCount++;
+        Invoke("IncreaseEnemiesMaxCount", increaseEnemiesCountDelay);
     }
 
     private void Update()
     {
+        for(var i =0; i< enemies.Count; i++)
+        {
+            if (enemies[i].IsAlive()) continue;
+            enemies.RemoveAt(i);
+            i--;
+        }
+
         if (enemies.Count >= enemiesMaxCount) return;
         if (Time.time - timeLastSpawned < delay) return;
 

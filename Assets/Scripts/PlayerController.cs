@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 _moveVector;
     private float _fallVelocity = 0;
     private CharacterController _characterController;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelocity = -jumpForce;
+            audioSource.Play();
         }
     }
 
