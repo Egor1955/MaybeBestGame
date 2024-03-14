@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float value = 100;
+    public PlayerProgress playerProgress;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class EnemyHealth : MonoBehaviour
     }
     public void DealDamage(float damage)
     {
+        playerProgress.AddExperiens(damage);
+
         value -= damage;
         if(value <= 0)
         {
