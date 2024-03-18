@@ -13,7 +13,12 @@ public class PlayerProgress : MonoBehaviour
     private float _experienceCurrentValue = 0;
     private float _experienceTargetValue = 100;
 
-    public void AddExperiens(float value)
+    void Start()
+    {
+        DrawUI();
+    }
+
+    public void AddExperience(float value)
     {
         _experienceCurrentValue += value;
         if(_experienceCurrentValue >= _experienceTargetValue)

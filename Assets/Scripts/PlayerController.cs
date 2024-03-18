@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         MowementUpdate();
         JumpUpdate();
+        Exit();
     }
 
     private void MowementUpdate()
@@ -76,6 +77,14 @@ public class PlayerController : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _fallVelocity = 0;
+        }
+    }
+
+    void Exit()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Application.Quit();
         }
     }
 }
